@@ -2,7 +2,7 @@
 
 ### Introduction
 I developed this software during my graduate years for my master thesis. 
-I published a IEEE conference paper named "A Hybrid E-nose System based on Metal Oxide Semiconductor Gas Sensors and Compact Colorimetric Sensors" using it. 
+I published a IEEE conference paper named "[A Hybrid E-nose System based on Metal Oxide Semiconductor Gas Sensors and Compact Colorimetric Sensors](https://ieeexplore.ieee.org/abstract/document/9495905)" using it. 
 It is capable of acquiring both metal oxide gas sensor data and colorimetric sensors data at the same time, and storing the signals in terms of CSV files.
 
 ### HOW TO USE IT
