@@ -22,4 +22,4 @@ Then run
 $ python main.py
 ```
 
-This software's user interface is based on pyqt5 and main_window.ui is generated using QtCreator and mendentory for the GUI.
+This software's user interface is based on pyqt5 and main_window.ui is generated using QtCreator and required for rendering the GUI.
