@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtCore, QtGui
 from view.main_window import MainWindow
-import EnoseDevices
+from model.devices import Enose, DataBuffer, DataManager
 
 
 def initializeDeliverySystem():
@@ -28,9 +28,9 @@ def desorptionCallback():
 
 app = QtWidgets.QApplication([])
 ui = MainWindow()
-enose = EnoseDevices.Enose()
-dataBuffer = EnoseDevices.DataBuffer()
-dataManager = EnoseDevices.DataManager()
+enose = Enose()
+dataBuffer = DataBuffer()
+dataManager = DataManager()
 
 ui.serial_requested.connect(enose.searchSerial)
 ui.serial_opened.connect(enose.openSerial)
