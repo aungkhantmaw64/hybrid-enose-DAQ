@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import cv2
 from PyQt5 import QtWidgets, QtCore, QtGui, uic
@@ -5,7 +6,7 @@ import pyqtgraph
 pyqtgraph.setConfigOptions(imageAxisOrder="row-major")
 
 
-class UI(QtWidgets.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
 
     serial_opened = QtCore.pyqtSignal(dict)
     serial_closed = QtCore.pyqtSignal()
@@ -45,7 +46,10 @@ class UI(QtWidgets.QMainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
         # widgets
-        uic.loadUi("main_window.ui", self)
+        src_path = os.path.join(os.getcwd(), "src")
+        view_path = os.path.join(src_path, "view")
+        ui_path = os.path.join(view_path, "main_window.ui")
+        uic.loadUi(ui_path, self)
         self.graphWidget = pyqtgraph.PlotWidget()
         self.imageWidget = pyqtgraph.GraphicsLayoutWidget()
         self.imageViewBox = self.imageWidget.addViewBox(
@@ -322,7 +326,7 @@ class UI(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
-    ui = UI()
+    ui = MainWindow()
     data = [np.ones(10),
             2*np.ones(10),
             3*np.ones(10),
