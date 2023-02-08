@@ -6,7 +6,7 @@ import pyqtgraph
 pyqtgraph.setConfigOptions(imageAxisOrder="row-major")
 
 
-class UI(QtWidgets.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
 
     serial_opened = QtCore.pyqtSignal(dict)
     serial_closed = QtCore.pyqtSignal()
@@ -326,7 +326,7 @@ class UI(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
-    ui = UI()
+    ui = MainWindow()
     data = [np.ones(10),
             2*np.ones(10),
             3*np.ones(10),

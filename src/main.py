@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets, QtCore, QtGui
-import EnoseUI
+from view.main_window import MainWindow
 import EnoseDevices
 
 
@@ -27,7 +27,7 @@ def desorptionCallback():
 
 
 app = QtWidgets.QApplication([])
-ui = EnoseUI.UI()
+ui = MainWindow()
 enose = EnoseDevices.Enose()
 dataBuffer = EnoseDevices.DataBuffer()
 dataManager = EnoseDevices.DataManager()
