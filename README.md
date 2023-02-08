@@ -6,6 +6,7 @@ I published a IEEE conference paper named "[A Hybrid E-nose System based on Meta
 It is capable of acquiring both metal oxide gas sensor data and colorimetric sensors data at the same time, and storing the signals in terms of CSV files.
 
 ### HOW TO RUN IT
+---
 First install [Git](https://git-scm.com/) and [Python Interpreter](https://www.python.org/) in your system.
 
 Open the command prompt and move to the folder you want to work on this software and run
@@ -23,3 +24,11 @@ $ python main.py
 ```
 
 This software's user interface is based on pyqt5 and main_window.ui is generated using QtCreator and required for rendering the GUI.
+
+## DAQ Interface
+---
+![](assets/images/screenshot.png)
+
+## LICENSE
+---
+MIT
